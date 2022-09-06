@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@tailwindcss/line-clamp": "^0.4.2",
     "axios": "^0.27.2",
     "lodash": "^4.17.21",
     "pinia": "^2.0.21",
