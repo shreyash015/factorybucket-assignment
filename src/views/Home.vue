@@ -27,7 +27,7 @@
   </template>
 
 <script>
-  import PulseLoader from 'vue-spinner/src/PulseLoader.vue'
+  import PulseLoader from 'vue-spinner/src/PulseLoader.vue';
 
     export default {
       name: 'Home',
@@ -49,6 +49,7 @@
             const bookTitleSplit = this.bookName.split(' ').join('+');
             this.axios.get(`http://openlibrary.org/search.json?title=${bookTitleSplit}`).then((res) => {
               this.isLoading=false;
+              this.bookName ='';
               this.$router.push('/results');
             })
           }
