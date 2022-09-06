@@ -12,15 +12,23 @@
             </a>
         </div>
         <p class="text-7xl text-white">Results</p>
-        <p class="text-4xl text-white mt-4">Total books found :</p>
+        <p class="text-4xl text-white mt-4">Total books found : {{store.booksData.numFound}}</p>
         <ListComponent class="max-w-2xl mx-auto mt-12" />
     </div>
 </template>
 
 <script>
     import ListComponent from "../components/ListComponent.vue";
+    import { useStore } from '../store/index';
+
 
     export default {
+        setup(){
+            const store = useStore();
+            return {
+                store,
+            }
+        },
         components: {
             ListComponent
         }
