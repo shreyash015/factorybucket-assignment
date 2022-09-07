@@ -13,7 +13,12 @@
         </div>
         <p class="text-7xl text-white">Results</p>
         <p class="text-4xl text-white mt-4">Total books found : {{store.booksData.numFound}}</p>
-        <ListComponent class="max-w-2xl mx-auto mt-12" />
+        <p class="text-4xl text-white mt-4">Total Results displayed below : 10</p>
+        <ul role="list" class="divide-y divide-gray-200  ">
+            <li class="relative">
+                <ListComponent v-for="(bookData,index) in store.booksData.docs" :key="index" class="max-w-2xl mx-auto mt-12"/>
+            </li>
+        </ul>
     </div>
 </template>
 
