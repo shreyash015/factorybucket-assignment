@@ -13,7 +13,7 @@ export const useStore = defineStore('bookStore', {
     actions:  {
        async setBooksData(booktitle) {
         try{
-            const booksJSON = await axios.get(`http://openlibrary.org/search.json?title=${booktitle}`)
+            const booksJSON = await axios.get(`https://openlibrary.org/search.json?title=${booktitle}`)
             this.booksData = booksJSON.data;
         }
             catch(error){
